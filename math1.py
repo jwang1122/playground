@@ -19,5 +19,9 @@ for i in "DCLXXVI":
 
 print("DCLXVI in Arabic Numerals is", sum)   
 
+print(66 % 4)
+import math
+print(math.floor((1987+5)/10)*10)
+
 # from math import *
 # print(gcd(28,21))

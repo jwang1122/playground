@@ -2,6 +2,7 @@ from turtle import *
 
 pen1 = Turtle()
 screen1 = Screen()
+pen1.shape("turtle")
 
 def drawCircle(x, y, r):
     """
@@ -33,6 +34,7 @@ def drawLine(x,y,angle,length):
     pen1.down()
     pen1.right(angle)
     pen1.fd(length)
+    pen1.left(angle)
 
 def drawTriangle(x, y, side):
     pen1.up()
@@ -45,7 +47,9 @@ def drawTriangle(x, y, side):
     pen1.right(120)
     pen1.fd(side)
 
-drawLine(10,10,-45,50)
+drawLine(10,10,45,50)
+drawLine(20,20,0,100)
+drawLine(20,20,90,100)
 # drawCircle(100,100,50)
 # drawRectangle(10,10,60,40)
 # pen1.width(10)
