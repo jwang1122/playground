@@ -1,35 +1,33 @@
 class Snowman:
-    def __init__(self, centerX, centerY, head, body, leg):
-        self.centerX = centerX
-        self.centerY = centerY
+    def __init__(self, bottomX, bottomY, head, body, leg):
+        self.bottomX = bottomX
+        self.bottomY = bottomY
         self.head = head
         self.body = body
         self.leg = leg
 
     def drawBody(self, pen1):
         pen1.pu()
-        pen1.goto(self.centerX, self.centerY)
+        pen1.goto(self.bottomX, self.bottomY+2*self.leg)
         pen1.down()
         pen1.circle(self.body)
 
     def drawHead(self, pen1):
         pen1.pu()
-        y = self.centerY+2*self.body
-        pen1.goto(self.centerX, y)
+        pen1.goto(self.bottomX, self.bottomY + 2*self.leg+2*self.body)
         pen1.down()
         pen1.circle(self.head)
 
     def drawLeg(self, pen1):
         pen1.pu()
-        y = self.centerY-2*self.leg
-        pen1.goto(self.centerX, y)
+        pen1.goto(self.bottomX, self.bottomY)
         pen1.down()
         pen1.circle(self.leg)
 
     def draw(self, pen1):
+        self.drawLeg(pen1)
         self.drawBody(pen1)
         self.drawHead(pen1)
-        self.drawLeg(pen1)
 
 
 def drawCircle(pen1, x, y, r):
