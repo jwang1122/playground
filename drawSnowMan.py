@@ -1,64 +1,21 @@
 from turtle import *
+from snowman import *
 
 pen1 = Turtle()
 screen1 = Screen()
 pen1.shape("turtle")
 
-def drawCircle(x, y, r):
-    """
-    draw a circle with radius r and position (x, y)
-    """
-    pen1.up()
-    pen1.goto(x,y)
-    pen1.down()
-    pen1.circle(r)
+man = Snowman(0,0,20,40,70)
+man.draw(pen1)
 
-def drawRectangle(x, y, width, height):
-    """
-    draw a circle with radius r and position (x, y)
-    """
-    pen1.up()
-    pen1.goto(x,y)
-    pen1.down()
-    pen1.fd(width)
-    pen1.right(90)
-    pen1.fd(height)
-    pen1.right(90)
-    pen1.fd(width)
-    pen1.right(90)
-    pen1.fd(height)
+kid = Snowman(130, -50, 10,20,40)
+kid.draw(pen1)
 
-def drawLine(x,y,angle,length):
-    pen1.up()
-    pen1.goto(x,y)
-    pen1.down()
-    pen1.right(angle)
-    pen1.fd(length)
-    pen1.left(angle)
 
-def drawTriangle(x, y, side):
-    pen1.up()
-    pen1.goto(x,y)
-    pen1.down()
-    pen1.right(60)
-    pen1.fd(side)
-    pen1.right(120)
-    pen1.fd(side)
-    pen1.right(120)
-    pen1.fd(side)
+woman = Snowman(-140,0,20,40,70)
+woman.draw(pen1)
 
-drawLine(10,10,45,50)
-drawLine(20,20,0,100)
-drawLine(20,20,90,100)
-# drawCircle(100,100,50)
-# drawRectangle(10,10,60,40)
-# pen1.width(10)
-# pen1.color('red')
-# drawLine(10,10,-10,50)
-# pen1.width(1)
-# pen1.color('black','red')
-# pen1.begin_fill()
-# drawTriangle(70,10,50)
-# pen1.end_fill()
+pen1.hideturtle()
+
 
 screen1.mainloop()
