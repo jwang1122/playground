@@ -37,5 +37,6 @@ print(66 % 4)
 import math
 print(math.floor((1987+5)/10)*10)
 
+print(pow(27,1/3))
 # from math import *
 # print(gcd(28,21))

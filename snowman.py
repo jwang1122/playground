@@ -14,9 +14,17 @@ class Snowman:
 
     def drawHead(self, pen1):
         pen1.pu()
-        pen1.goto(self.bottomX, self.bottomY + 2*self.leg+2*self.body)
+        headBottomY = self.bottomY + 2*self.leg+2*self.body
+        headBottomX = self.bottomX + self.head*1/4
+        pen1.goto(self.bottomX, headBottomY)
         pen1.down()
         pen1.circle(self.head)
+        pen1.pu()
+        pen1.goto(headBottomX, headBottomY + self.head*3/5)
+        pen1.left(30)
+        pen1.down()
+        pen1.circle(self.head*2/3, -60)
+        pen1.left(30)
 
     def drawLeg(self, pen1):
         pen1.pu()
