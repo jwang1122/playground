@@ -6,11 +6,6 @@ def add(x,y):
 def sub(x,y):
     print("%d - %d = %d" % (x,y,x-y))
 
-sub(2020,20)
-print("2020-20 = ",2020-20)
-
-print("The tens digit of 1296 is", "1296"[-2])
-
 def converter(s):
     D=500
     C=100
@@ -27,16 +22,28 @@ def converter(s):
         if(i=="V"): sum += V
         if(i=="I"): sum += I
 
-    print(s,"in Arabic Numerals is", sum)   
+def prime(x):
+    """
+    Any natural number that is not divisible by any other number 
+    except 1 and itself called Prime Number in Python.
 
-converter("DCLXXVI")
-converter("DCLXXXVI")
+    return True if x is a prime number, return False otherwise.
+    """
+    flag = True
 
-print(math.gcd(28,21))
-print(66 % 4)
-import math
-print(math.floor((1987+5)/10)*10)
+    for i in range(2, (x//2 + 1)):
+        if(x % i == 0):
+            flag = False
+            break
 
-print(pow(27,1/3))
-# from math import *
-# print(gcd(28,21))
+    return flag and x != 1
+
+def rangePrime(x,y):
+    """
+    return list of prime numbers between x and y.
+    """
+    list1 = []
+    for i in range (x,y+1):
+        if (prime(i)):
+            list1.append(i)
+    return list1
