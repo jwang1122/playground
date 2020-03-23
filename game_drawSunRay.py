@@ -10,3 +10,4 @@ for i in range(50):
     distance = random.randint(0, 150)
     terry.forward(distance)
     terry.backward(distance)
+    aifjaldi
