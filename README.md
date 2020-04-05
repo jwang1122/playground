@@ -1,7 +1,20 @@
 # playground
 python playground
 
-## Issues
+## Frequently used GIT commands
+to clone a repository from GitHub to your laptop
+first got to your workspace root folder, then
+
+```
+git clone <paste your git URL here>
+```
+
+## Install Package online
+```
+pip install panada
+```
+
+## GitHub Issues
 
 1. cannot upload project to git repository, always pops up user.name and email not set
 ```
