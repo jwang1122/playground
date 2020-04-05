@@ -14,3 +14,9 @@ git config user.name "xxxx xxxx"
 git config user.email "xxxx@gmail.com"
 more ~/.gitconfig
 ```
+
+2. create a virtual environment
+```
+python3 -m venv env
+source env/bin/activate
+```
