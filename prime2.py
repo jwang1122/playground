@@ -1,12 +1,12 @@
-Number = 40
-count = 0
+Number = 5
+flag = True
 
-for i in range(2, (Number//2 + 1)):
+for i in range(2, (Number//2)): #Floor division - division that results into whole number adjusted to the left in the number line
     if(Number % i == 0):
-        count = count + 1
+        flag = False
         break
 
-if (count == 0 and Number != 1):
+if (flag == 0 and Number != 1):
     print(" %d is a Prime Number" %Number)
 else:
     print(" %d is not a Prime Number" %Number)

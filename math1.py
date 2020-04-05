@@ -3,8 +3,33 @@ import math;
 def add(x,y):
     print("%d + %d = %d" % (x,y,x+y))
 
+def addList(x):
+    sum = 0;
+    result = "";
+    for s in x:
+        sum += s
+        result += str(s) + '+'
+    result = result[:len(result)-1]
+    print(f"{result}={sum}")
+    
+    # for v in x:
+    #     sum += v
+    #     print(v, end="+")
+    # print("=%d" %sum)
+
+    # result = ""
+    # size = len(x)
+    # for i in range(size):
+    #     sum += x[i]
+    #     if (size-1==i):
+    #         result += str(x[i])
+    #     else:
+    #         result += (str(x[i]) + "+")
+    # print(f"{result}={sum}")
+
 def sub(x,y):
     print("%d - %d = %d" % (x,y,x-y))
+
 
 def converter(s):
     D=500
