@@ -8,7 +8,10 @@ first got to your workspace root folder, then
 ```
 git clone <paste your git URL here>
 ```
-
+pull new source from github
+```
+git pull
+```
 ## Install Package online
 ```
 pip install panada
@@ -33,3 +36,5 @@ more ~/.gitconfig
 python3 -m venv env
 source env/bin/activate
 ```
+
+![hello](filemode.jpeg)
