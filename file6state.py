@@ -33,14 +33,14 @@ print ((date2))
 print ((ChinaConfirmed))
 
 fig=plt.figure()
-ax=fig.add_subplot(111)
+ax=fig.add_subplot(111)#the 111 means 1x1 grid, first subplot
 
 x = date1
 y = USConfirmed
-ax.plot(x,y,c='r',marker='*',ls='-',label='US')
-ax.plot(date2,ChinaConfirmed,c='g',marker='v',ls='-',label='China')
+ax.plot(x,y,c='r',marker='*',ls='-',label='China')
+ax.plot(date2,ChinaConfirmed,c='g',marker='v',ls='-',label='US')
 labels=ax.get_xticklabels()
 plt.setp(labels, rotation=90, horizontalalignment='right')
-ax.set(xlim=['2020-03-04', '2020-04-04'],xlabel='Date',ylabel='Confirmed',title='Coronavirus Report')
+ax.set(xlim=['2020-03-04', '2020-04-04'],xlabel='Date',ylabel='Confirmed',title='Coronavirus Report')#xlim means x axis limits, sets the limits for the x axis
 plt.legend(loc=2)
 plt.show()
