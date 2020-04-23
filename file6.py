@@ -13,9 +13,8 @@ texasConfirmed = []
 texasDeath = []
 
 first = True
-with open('data_minimal.csv', 'r') as covid_19: #CSV: Comma Separated Values 
+with open('data_minimal.csv', 'r') as covid_19:
     reader = csv.reader(covid_19)
-    last = ''
     for row in covid_19:
 #        print(row)
         if first:

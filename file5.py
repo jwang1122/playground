@@ -11,3 +11,4 @@ y = data['Score']
 
 plt.plot(x,y)
 plt.show()
+
