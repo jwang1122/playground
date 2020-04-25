@@ -5,7 +5,7 @@ from turtle import *
 from freegames import vector
 
 t1 = Turtle(visible=False)
-t1.pu()
+t1.penup()
 
 
 def draw():
