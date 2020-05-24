@@ -1,4 +1,5 @@
 class item:
+    
     def __init__(self, name, price:float):
         self.name = name
         self.price = price
@@ -13,7 +14,7 @@ class lineItem:
         self.subtotal = product.price * quantity
 
     def __repr__(self):
-        return self.item.name + ": " + str(self.subtotal)
+        return self.item.name + ": \t" + str(self.subtotal)
 
 class order:
     def __init__(self):
