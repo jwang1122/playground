@@ -1,3 +1,7 @@
+'''
+dynamically assign a new method to existing object
+
+'''
 from types import MethodType
 
 class MyObj(object):
@@ -9,6 +13,6 @@ def new_method(self, value):
 
 obj = MyObj(3)
 
-#rename the method new_method to be add defined in obj instance.
+#rename the method new_method to be added defined in obj instance.
 obj.add = MethodType(new_method, obj)
 print(obj.add(5))

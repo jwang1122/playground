@@ -1,4 +1,14 @@
 {
-    "python.pythonPath": "env/bin/python3",
-    "python.formatting.provider": "yapf"
+    "python.pythonPath": "/Users/wangqianjiang/workspace/playground/env/bin/python3",
+    "python.formatting.provider": "yapf",
+    "python.testing.unittestArgs": [
+        "-v",
+        "-s",
+        ".",
+        "-p",
+        "test_*.py"
+    ],
+    "python.testing.pytestEnabled": false,
+    "python.testing.nosetestsEnabled": false,
+    "python.testing.unittestEnabled": true
 }

@@ -1,4 +1,1 @@
-2020-02-18 12:05:54,100  INFO [WANG] - ('Success', 'The x=4 mod of 2 is 0.')::func3.py::27
-2020-02-18 12:05:54,101 ERROR [WANG] - Left: ('Error', 'The input value 3.2 is not an interger.')::func3.py::25
-2020-02-18 12:05:54,101 ERROR [WANG] - Left: ('Error', 'The input value (3+2j) is not an interger.')::func3.py::25
-2020-02-18 12:05:54,101  INFO [WANG] - Right: ('Success', 'The x=-2 mod of 2 is 0.')::func3.py::27
+2020-05-30 18:31:19,468 INFO [WANG] - Error: wrong input value::logging1.py::14
