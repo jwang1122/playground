@@ -11,5 +11,5 @@ def area(f, r):
 传递功能块的妙处。
 call area and pass different function, will get different result.
 """
-print("10:",area(circle_area, 4))
-print("11:",area(square_area, 4))
+print("14:",area(circle_area, 4))
+print("15:",area(square_area, 4))

@@ -7,12 +7,13 @@ def printCircleArea(r):
     except Exception as err:
         print("Error: ", err)
 
-printCircleArea(1)
-printCircleArea(2.3)
-printCircleArea(-2)
-printCircleArea(-2+3j)
-printCircleArea("Hello")
-printCircleArea(None)
+if __name__ == '__main__':
+    printCircleArea(1)
+    printCircleArea(2.3)
+    printCircleArea(-2)
+    printCircleArea(-2+3j)
+    printCircleArea("Hello")
+    printCircleArea(None)
 
-print("Done.")
+    print("Done.")
 
