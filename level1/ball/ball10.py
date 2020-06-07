@@ -11,7 +11,7 @@ cannon.screen.bgcolor("lightblue")
 screen = Screen()
 bg_img = r'grassField.gif'
 screen.bgpic(bg_img)
-bird_img = 'bird.gif'
+bird_img = './images/bird.gif'
 bird_dead = "upsidedownbird.gif"
 screen.addshape(bird_img)
 screen.addshape(bird_dead)

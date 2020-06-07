@@ -7,6 +7,9 @@ def f2(x):
 def ff(f, x):
     return f(x)
 
+# y = f1(5)
+# print(y)
+
 v = ff(f1, 7)
 print(v)
 

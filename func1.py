@@ -13,3 +13,5 @@ call area and pass different function, will get different result.
 """
 print("14:",area(circle_area, 4))
 print("15:",area(square_area, 4))
+
+print("17:",circle_area(4))
