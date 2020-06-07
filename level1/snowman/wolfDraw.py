@@ -1,6 +1,6 @@
 from turtle import *
 
-obj_img = 'wolf.gif'
+obj_img = './images/wolf.gif'
 screen = Screen()
 screen.register_shape(obj_img)
 

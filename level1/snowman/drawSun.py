@@ -1,7 +1,7 @@
 from turtle import *
 from random import *
 from freegames import vector
-bg_img=r'grassField.gif'
+bg_img='./images/grassField.gif'
 screen = Screen()
 s = Shape('compound')
 poly1 = ((0,0),(10,-5),(0,10),(-10,-5))
