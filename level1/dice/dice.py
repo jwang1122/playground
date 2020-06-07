@@ -1,5 +1,8 @@
 import random
 
+"""
+rolling two dice and display the result of the two dice
+"""
 def main():
     min = 1
     max = 6
