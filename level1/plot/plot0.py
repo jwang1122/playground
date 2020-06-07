@@ -1,4 +1,9 @@
+"""
+plot a string line
+"""
 import matplotlib.pyplot as plt
+
+
 plt.plot([1,2,3,4])
  
 # when you want to give a label

@@ -1,3 +1,6 @@
+"""
+plot 3 functions in one plot
+"""
 import numpy as np
 import matplotlib.pyplot as plt
  
