@@ -27,5 +27,5 @@ def dimond(n):
     triangle(n)
     upsidedown(n)
 
-triangle(5)
-dimond(6)
+#triangle(7)
+dimond(8)

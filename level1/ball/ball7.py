@@ -7,9 +7,9 @@ from freegames import vector
 cannon = Turtle(visible=False)
 cannon.pu()
 #cannon.screen.bgcolor("aqua")
-bird_img = 'bird.gif'
+bird_img = './images/bird.gif'
 screen = Screen()
-bg_img = r'grassField.gif'
+bg_img = './images/grassField.gif'
 screen.bgpic(bg_img)
 screen.register_shape(bird_img)
 bird = Turtle()
