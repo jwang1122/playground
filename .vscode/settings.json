@@ -4,7 +4,7 @@
     "python.testing.unittestArgs": [
         "-v",
         "-s",
-        ".",
+        "./level2",
         "-p",
         "test_*.py"
     ],

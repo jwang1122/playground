@@ -3,7 +3,7 @@ def f(a, b, /, c, d, *, e, f):
     a,b are positional-only, c,d can be positional or keyword
     e and f are required to be keyword.
     / separate the position-only arguments from others
-    * separage the keyword-only arguments from others
+    * separate the keyword-only arguments from others
     """
     print(a, b, c, d, e, f)
 
