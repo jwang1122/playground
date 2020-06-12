@@ -1,3 +1,5 @@
+import random
+
 class Card:
     faces = ("ZERO", "ACE", "TWO", "THREE","FOUR", "FIVE", "SIX", "SEVEN", "EIGHT", "NINE", "TEN", "JACK","QUEEN", "KING")
     suits = ('DIAMONDS', "CLUBS", "SPADES", "HEARTS")
@@ -14,7 +16,7 @@ class Card:
         pass
 
     def __repr__(self):
-        return "(" + str(self.getValue()) + "," + self.suit + ")"
+        return "(" + Card.faces[self.face] + " of " + self.suit + ")"
 
     def getValue(self):
         return self.face
@@ -30,11 +32,65 @@ class BlackJackCard(Card):
             return 10
         return self.face
 
-if __name__ == '__main__':
-    c1 = Card(4, "DIAMONDS")
-    print(c1)
-    c2 = Card(4, "HEART")
-    if(c1 == c2):
-        print("Same")
-    else:
-        print("Different")
+
+class Deck:
+    NUMFACES = 13
+    NUMSUITS = 4
+    NUMCARDS = 52
+    SUITS = ('DIAMONDS', "CLUBS", "SPADES", "HEARTS")
+    def __init__(self):
+        # initialize data - stackOfCards - topCardIndex
+        self.topCardIndex = 51
+        self.stackOfCards = []
+
+        for i in range(len(Deck.SUITS)):
+            for j in range(Deck.NUMFACES):
+                self.stackOfCards.append(BlackJackCard(j+1, Deck.SUITS[i]))
+
+    def __repr__(self):
+        pass
+
+    def setTopCardIndex(self, n):
+        # setter
+        pass
+
+    def setStackOfCards(self,cards):
+        # setter
+        pass
+
+    def shuffle(self):
+        random.shuffle(self.stackOfCards)
+        self.topCardIndex = 51
+
+    def getCard(self):
+        return self.topCardIndex
+
+    def size(self):
+        return 52
+
+    def numCardsLeft(self):
+        return 0
+
+    def nextCard(self):
+        self.topCardIndex -= 1
+        return self.stackOfCards[self.topCardIndex]
+
+class Player:
+    def __init__(self):
+        pass
+    
+    def addCardToHand(self, card):
+        pass
+
+    def getHandValue(self):
+        return 9
+
+    def hit(self):
+        value = self.getHandValue()
+        if value >= 20:
+            return False
+        if value <= 10:
+            return True
+        answer = input("Do you want to hit? (y or n): ")
+        return True if answer=='y' else False
+
