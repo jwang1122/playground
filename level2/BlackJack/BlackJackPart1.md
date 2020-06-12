@@ -60,3 +60,23 @@ def CardTestOne():
 ```
 
 * Write unittest test all possibilities, handle all possible input errors.
+
+>>> from card import *
+>>> c1 = BlackJackCard(10, "HEARTS")
+>>> c2 = BlackJackCard(13, "CLUBS")
+>>> print(c1 == c2)
+True
+
+>>> c1 = BlackJackCard(0, "HEARTS")
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/Users/wangqianjiang/workspace/playground/card.py", line 9, in __init__
+    raise ValueError("Invalid Card Face!")  
+ValueError: Invalid Card Face!
+
+>>> c1 = BlackJackCard(5, "HEART")
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/Users/wangqianjiang/workspace/playground/card.py", line 11, in __init__
+    raise ValueError("Invalid Card Suit!") 
+ValueError: Invalid Card Suit!
