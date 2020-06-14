@@ -60,7 +60,7 @@ ax2.plot(x,z,c='r',marker='*',ls='-',label='New York')
 ax2.plot(x,texasDeath,c='g',marker='v',ls='-',label='Texas')
 labels2 = ax2.get_xticklabels()
 plt.setp(labels2, rotation=90, horizontalalignment='right')
-ax2.set(xlim=[datetime.strptime('2020-03-04','%Y-%m-%d'),datetime.strptime('2020-04-04','%Y-%m-%d')], xlabel='Date', ylabel='Confirmed',
+ax2.set(xlim=[datetime.strptime('2020-03-04','%Y-%m-%d'),datetime.strptime('2020-04-04','%Y-%m-%d')], xlabel='Date', ylabel='Death',
        title='Coronavirus Report')
 
 ax.locator_params(axis='y', nbins=7)

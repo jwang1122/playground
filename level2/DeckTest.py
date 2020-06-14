@@ -3,7 +3,8 @@ from card import *
 deck = Deck()
 
 for i in range(Deck.NUMCARDS):
-    print(i, ":", deck.nextCard())
+    c = deck.nextCard()
+    print(i, ":", c, c.getValue())
 print()
 
 deck.shuffle()
