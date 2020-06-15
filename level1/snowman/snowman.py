@@ -1,90 +1,118 @@
+from shapes import *
+
 class Snowman:
-    def __init__(self, bottomX, bottomY, head, body, leg):
+    """
+    Draw a snowman
+    """
+    def __init__(self, bottomX, bottomY, head, body, leg, male):
+        """
+        bottomX: snowman leg horizontal position
+        bottomY: snowman leg vertical position
+        head: snowman head radius
+        body: snowman body radius
+        leg: snowman leg radius
+        """
         self.bottomX = bottomX
         self.bottomY = bottomY
         self.head = head
         self.body = body
         self.leg = leg
+        self.male = male
 
     def drawBody(self, pen1):
-        pen1.pu()
-        pen1.goto(self.bottomX, self.bottomY+2*self.leg)
-        pen1.down()
-        pen1.circle(self.body)
+        """
+        Use given pen1 = Turtle() draw a circle with radius = self.body
+        as snowman body. After the drawing,
+        the turtle point to right direction.
+        """
+        drawCircle(pen1,self.bottomX, self.bottomY+2*self.leg, self.body)
 
     def drawHead(self, pen1):
-        pen1.pu()
+        """
+        Use given pen1 = Turtle draw a circle with radius = self.head
+        after the drawing, turtle point to right.
+        """
         headBottomY = self.bottomY + 2*self.leg+2*self.body
         headBottomX = self.bottomX + self.head*1/4
-        pen1.goto(self.bottomX, headBottomY)
-        pen1.down()
-        pen1.circle(self.head)
+        drawCircle(pen1,self.bottomX, headBottomY, self.head)
         pen1.pu()
         pen1.goto(headBottomX, headBottomY + self.head*3/5)
         pen1.left(30)
         pen1.down()
         pen1.circle(self.head*2/3, -60)
+        pen1.up()
         pen1.left(30)
+        pen1.color('black','blue')
+        pen1.begin_fill()
+        drawCircle(pen1,headBottomX - int(self.head*3/5), headBottomY + int(self.head*4/5), int(self.head*1/5))
+        pen1.end_fill()
+        pen1.color('black','blue')
+        pen1.begin_fill()
+        drawCircle(pen1,headBottomX + int(self.head*1/5), headBottomY + int(self.head*4/5), int(self.head*1/5))
+        pen1.end_fill()
+#        pen1.circle(headBottomX + self.head*1/5, headBottomY + self.head*4/5, self.head*1/5)
 
     def drawLeg(self, pen1):
+        """
+        Use given pen1 = Turtle() draw a circle with radius = self.leg
+        as snowman leg, after the drawing, turtle point to right.
+        """
         pen1.pu()
         pen1.goto(self.bottomX, self.bottomY)
         pen1.down()
         pen1.circle(self.leg)
 
+    def drawArms(self, pen1):
+        x = self.bottomX-self.body
+        y = (self.bottomY+2*self.leg+self.body)
+        pen1.width(5)
+        pen1.color("darkred")
+        drawLine(pen1, x, y, 145, self.body)
+        pen1.left(120)
+        pen1.fd(self.body)
+        pen1.right(120)
+        pen1.penup()
+        pen1.goto(x+2*self.body, y)
+        pen1.right(45)
+        pen1.down()
+        pen1.fd(self.body)
+        pen1.left(45)
+        pen1.right(30)
+        pen1.fd(self.body)
+        pen1.left(30)
+        pen1.color("black")
+        pen1.width(1)
+
+    def drawHat(self, pen1):
+        if self.male:
+            x = self.bottomX-self.head
+            y = self.bottomY + 2*self.body + 2*self.leg + 2*self.head - self.head/5
+            pen1.color('black','darkred')
+            pen1.begin_fill()
+            drawRectangle(pen1, x, y, 2*self.head, 3*self.head)
+            pen1.end_fill()
+            pen1.width(5)
+            pen1.bk(self.head*1/5)
+            pen1.fd(2.3*self.head)
+            pen1.width(1)
+        else:
+            x = self.bottomX-1.5*self.head
+            y = self.bottomY + 2*self.body + 2*self.leg + 2*self.head - self.head/5
+            pen1.color('black','yellow')
+            pen1.begin_fill()
+            drawTriangle(pen1, x, y, 0, 3*self.head)
+            pen1.end_fill()
+            pen1.width(1)
+
+            pass
+
     def draw(self, pen1):
+        """
+        Draw a snowman.
+        """
         self.drawLeg(pen1)
         self.drawBody(pen1)
+        self.drawArms(pen1)
         self.drawHead(pen1)
-
-
-def drawCircle(pen1, x, y, r):
-    """
-    draw a circle with radius r and position (x, y)
-    """
-    pen1.up()
-    pen1.goto(x, y)
-    pen1.down()
-    pen1.circle(r)
-
-
-def drawLine(pen1, x, y, angle, length):
-    """
-    draw a line start at position (x,y) and angle and length
-    """
-    pen1.up()
-    pen1.goto(x, y)
-    pen1.down()
-    pen1.left(angle)
-    pen1.fd(length)
-    pen1.right(angle)
-
-
-def drawTriangle(pen1, x, y, side):
-    pen1.up()
-    pen1.goto(x, y)
-    pen1.down()
-    pen1.right(60)
-    pen1.fd(side)
-    pen1.right(120)
-    pen1.fd(side)
-    pen1.right(120)
-    pen1.fd(side)
-    pen1.right(60)
-
-
-def drawRectangle(pen1, x, y, width, height):
-    """
-    draw a circle with radius r and position (x, y)
-    """
-    pen1.up()
-    pen1.goto(x, y)
-    pen1.down()
-    pen1.fd(width)
-    pen1.right(90)
-    pen1.fd(height)
-    pen1.right(90)
-    pen1.fd(width)
-    pen1.right(90)
-    pen1.fd(height)
-    pen1.right(90)
+        self.drawHat(pen1)
+        pen1.hideturtle()
