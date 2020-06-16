@@ -1,6 +1,6 @@
 import json
 
-f = open('books.json')
+f = open('./data/books.json')
 
 data = json.load(f)
 #print(data)

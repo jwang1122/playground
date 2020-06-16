@@ -1,5 +1,11 @@
 """
 plot 6 different lines with legend
+y(x) = x
+y(x) = x+1
+y(x) = -3x^2 + 3x + 6
+y(x) = (x-1)^2
+y(x) = x^2 - 1
+y(x) = x - 1
 """
 import matplotlib.pyplot as plt
 import numpy as np
