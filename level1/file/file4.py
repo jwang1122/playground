@@ -3,5 +3,5 @@ Read csv file.
 """
 import pandas as pd
 
-students = pd.read_csv("students.csv")
+students = pd.read_csv("./data/students.csv")
 print(students)

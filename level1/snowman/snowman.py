@@ -67,19 +67,27 @@ class Snowman:
         y = (self.bottomY+2*self.leg+self.body)
         pen1.width(5)
         pen1.color("darkred")
+        # right arm
         drawLine(pen1, x, y, 145, self.body)
         pen1.left(120)
         pen1.fd(self.body)
         pen1.right(120)
+
         pen1.penup()
         pen1.goto(x+2*self.body, y)
         pen1.right(45)
         pen1.down()
+        # left arm
         pen1.fd(self.body)
         pen1.left(45)
-        pen1.right(30)
-        pen1.fd(self.body)
-        pen1.left(30)
+        if self.male:
+            pen1.right(30)
+            pen1.fd(self.body)
+            pen1.left(30)
+        else:
+            pen1.right(120)
+            pen1.fd(self.body)
+            pen1.left(120)
         pen1.color("black")
         pen1.width(1)
 

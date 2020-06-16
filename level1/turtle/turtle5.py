@@ -1,14 +1,17 @@
 """
-limit the turtle within certain area
+limit the turtle within window bounds
 """
 from turtle import *
 from random import *
 
-def distance():
-    return randint(-100,200)
 
-def angle():
-    return randint(-380, 360)
+def newX():
+    return randint(-300, 300)
+
+
+def newY():
+    return randint(-300, 300)
+
 
 john = Turtle()
 john.shape("turtle")
@@ -19,12 +22,15 @@ john.forward(120)
 john.right(45)
 john.fd(50)
 
+
 def tap(x, y):
-    john.right(angle())
-    john.forward(distance())
     pos = john.position()
-    if pos[0] < -200 or pos[0] > 200 or pos[1] < -200 or pos[1] > 200:
-        john.goto(x, y)
+    x = pos[0] + newX()
+    y = pos[1] + newY()
+    if x > 300 or x < -300: x = pos[0]
+    if y > 300 or y < -300: y = pos[1]
+    john.goto(x, y)
+
 
 john.onclick(tap)
 
