@@ -1,8 +1,8 @@
 from turtle import *
 from random import *
 
-obj_img = 'cat.gif'
-bg_img = r'grassField.gif'
+obj_img = './images/cat.gif'
+bg_img = r'./images/grassField.gif'
 screen = Screen()
 screen.register_shape(obj_img)
 screen.bgpic(bg_img)
