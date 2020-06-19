@@ -11,3 +11,8 @@ print("11:", list1)  # __repr__
 
 x = list1[1] >= 1  # __ge__
 print("14:", x)  # output: True
+
+s1 = "abc"
+s2 = "john"
+print("17:",s1>s2) # __gt__ implemented in str class
+

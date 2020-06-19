@@ -8,7 +8,7 @@ def test():
     print(x)
 
 def mymap(data):
-    result = list()
+    result = []
     for d in data:
         x = c2f(d)
         result.append(x)

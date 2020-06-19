@@ -5,5 +5,7 @@ def test():
     temps.sort(key=lambda data: data[0])
     print(temps)
 
-    temps.sort(key=lambda data:data[1])
+    temps.sort(reverse=True, key=lambda data:data[1])
     print(temps)
+
+test()

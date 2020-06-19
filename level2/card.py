@@ -46,6 +46,9 @@ class Deck:
         self.topCardIndex = 51
         self.stackOfCards = [BlackJackCard(f, s) for s in Deck.SUITS for f in range(len(Deck.FACES))]
 
+    def __len__(self):
+        return self.topCardIndex
+
     def setTopCardIndex(self, n):
         self.topCardIndex = n
 
@@ -176,4 +179,8 @@ def playGame():
             gameOver = True
         
 if __name__ == '__main__':
-    playGame()
+    # playGame()
+    deck1 = Deck()
+    print(len(deck1))
+    deck1.nextCard()
+    print(len(deck1))

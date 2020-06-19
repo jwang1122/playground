@@ -19,9 +19,6 @@ f2 = build_quatratic_function(3, 5, 7)
 print('20:',type(f2))
 print("21:", f2(2))
 
-# map lambda function to each city-temperature data
-temps = [("Berlin", 29),("Cairo", 36),("Buenos Aires", 19),("Los Angeles", 26),("Tokyo", 27),("New York", 28),("London", 22),("Beijing", 32)]
-list1=list(map(lambda data: (data[0], round(9/5*data[1] + 32, 2)), temps))
-print("25:",list1)
 
-print("28:",ff2(lambda x,y: 3*x + 2*y, 4, 6))
+print("34:",ff2(lambda x,y: 3*x + 2*y, 4, 6))
+

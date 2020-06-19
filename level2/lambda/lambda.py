@@ -1,10 +1,27 @@
 from math import pi
 
-a = lambda r:r**2*pi
 
+def circle_area(r):
+    return r * r * pi
+
+
+area = lambda r: r**2 * pi  # anonymous function, short expression
+
+print(area(1))
+print(circle_area(1))
+print(area(-2))
+
+a = lambda r: circle_area(r)
 print(a(1))
 print(a(-2))
 
-for i in range(10):
-    x = lambda y: y*y
+x = lambda y: y * y  # x is a function name
+
+for i in range(5):
     print(x(i))
+
+def foo (f, x):
+    return f(x)
+
+for i in range(5):
+    print(foo(lambda x: x * x, i))
