@@ -1,1 +1,2 @@
-Hello, world! it is a test.
+Hello, world!
+Hello John Wang.

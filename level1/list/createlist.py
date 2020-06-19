@@ -6,6 +6,9 @@ print(l)
 l = [s for s in range(5)]
 print(l)
 
+l = [e for e in range(1,10) if e%2==0]
+print("10:",l)
+
 t = tuple(range(5))
 print(t)
 

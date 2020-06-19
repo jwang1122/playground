@@ -1,3 +1,6 @@
+"""
+Readability is higher, but more code compare to prime4.py
+"""
 def prime(x):
     flag = True
 
@@ -8,5 +11,6 @@ def prime(x):
 
     return flag and x != 1
 
-for i in range(2, 20):
-    print("prime", i, prime(i))
+if __name__ == '__main__':
+    for i in range(0, 20):
+        print("prime", i, prime(i)) 

@@ -4,7 +4,7 @@ Good final example how to use timer decorator
 import time
 
 def my_timer(original):
-
+    print(original.__name__)
     def wrapper(*args, **kwargs):
         t1 = time.time()
         result = original(*args, **kwargs)
