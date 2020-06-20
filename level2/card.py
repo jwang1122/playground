@@ -180,6 +180,7 @@ def playGame():
         
 if __name__ == '__main__':
     # playGame()
+    c1 = Card(12,"Hearts")
     deck1 = Deck()
     print(len(deck1))
     deck1.nextCard()

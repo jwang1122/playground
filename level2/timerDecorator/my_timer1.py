@@ -31,12 +31,14 @@ def anotherLongRun(parm1, parm2):
     time.sleep(3)
     print(f"23: another long run process with arguments({parm1}, {parm2})")
 
-# pass function to my_timer, my_timer return a function f1
-f1 = my_timer(display_info)
-# call the function
-f1("John", 23)
+if __name__ == '__main__':
+    # pass function to my_timer, my_timer return a function f1
+    f1 = my_timer(display_info)
+    # call the function
+    f1("John", 23)
 
-# pass another function to my_timer
-f1 = my_timer(anotherLongRun)
-# call the function
-f1("Long", "Run...")
+    # pass another function to my_timer
+    f1 = my_timer(anotherLongRun)
+    # call the function
+    f1("Long", "Run...")
+

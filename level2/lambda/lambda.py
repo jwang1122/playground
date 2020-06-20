@@ -5,9 +5,9 @@ def circle_area(r):
     return r * r * pi
 
 
-area = lambda r: r**2 * pi  # anonymous function, short expression
+area = lambda r: r**2 * pi  # anonymous function, lambda expression
 
-print(area(1))
+print(lambda r: r**2 * pi(1))
 print(circle_area(1))
 print(area(-2))
 
@@ -25,3 +25,6 @@ def foo (f, x):
 
 for i in range(5):
     print(foo(lambda x: x * x, i))
+
+for i in range(5):
+    print(foo(lambda x: x * x * x, i))

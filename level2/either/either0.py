@@ -1,3 +1,6 @@
+"""
+isEven() function return either Right(success) or Lift(error)
+"""
 from pymonad import *
 
 def isEven(x):

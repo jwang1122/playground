@@ -18,6 +18,8 @@ def display_info(name, age):
     import time
     time.sleep(2) # simulate long process function
     print(f"20: display_info()... run with arguments: ({name}, {age})")
+    return age
 
 # Call the function as usual, because we use the decorator @my_timer
-display_info("John", 23)
+x = display_info("John", 23)
+print(x)

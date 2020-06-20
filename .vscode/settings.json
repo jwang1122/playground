@@ -1,5 +1,5 @@
 {
-    "python.pythonPath": "/Users/wangqianjiang/workspace/playground/env/bin/python3",
+    "python.pythonPath": "env/bin/python",
     "python.formatting.provider": "yapf",
     "python.testing.unittestArgs": [
         "-v",
