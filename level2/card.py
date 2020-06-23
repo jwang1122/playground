@@ -1,6 +1,7 @@
 import random
+from abc import ABC, abstractmethod 
 
-class Card:
+class Card(ABC):
     # constructor
     def __init__(self, face, suit):
         # instance variables
@@ -10,13 +11,14 @@ class Card:
     def __repr__(self):
         return " of ".join((Deck.FACES[self.face], self.suit))
 
+    @abstractmethod  
     def getValue(self):
         return self.face + 1
 
     def __eq__(self, other):
         return self.getValue() == other.getValue()
 
-    def __gt__(self, other):
+    # def __gt__(self, other):
         return self.getValue() > other.getValue()
 
     def __lt__(self, other):
@@ -180,7 +182,13 @@ def playGame():
         
 if __name__ == '__main__':
     # playGame()
-    c1 = Card(12,"Hearts")
+    try:
+        c1 = Card(12,"Hearts")
+        print(c1)
+    except Exception as err:
+        print(err)
+    b1 = BlackJackCard(12,"Clubs")
+    print(b1)
     deck1 = Deck()
     print(len(deck1))
     deck1.nextCard()
