@@ -43,11 +43,12 @@ class BookDB:
         return result
 
     # Update
-    def update(self, book):
+    def update(self, _id, book):
         """
         Update one record in database
         """
-        self.delete(book['_id'])
+        book["_id"] = _id
+        self.delete(_id)
         self.create(book)
 
     # Delete
