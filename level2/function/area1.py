@@ -1,5 +1,11 @@
 from math import pi
-
+"""
+重要的 web service 理念：
+永远pass一个单一变量，返回一个单一变量。
+例如：
+    输入：ServiceRequest
+    返回：ServiceResponse
+"""
 def circleArea(args):
     r = args[0]
     return r*r*pi

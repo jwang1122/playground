@@ -1,6 +1,12 @@
 from pymonad import *
 """
 bind function list, terminated during error out in the middle.
+重要的 Web Service 编程理念：
+    任何service都返回两种可能性：1. 成功； 2. 失败
+    一旦失败，service立即带着错误信息返回。
+    最终成功：service带着成功结果返回。
+功能块驱动理念：
+    将眼光聚焦在所要完成任务都一系列操作上，将这些操作链接起来（bind）
 
 """
 def isEven(x):
