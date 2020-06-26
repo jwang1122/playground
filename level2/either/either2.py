@@ -45,6 +45,6 @@ def f1(x):
     return isEven(x) >> sub4 >> add5 >> sub4 >> add5
 
 
-print("44:", f1(11).value)
-print("45:", f1(12).value)
-print("46:", f1(4).value)
+print("44:", f1(11))
+print("45:", f1(12))
+print("46:", f1(4))
