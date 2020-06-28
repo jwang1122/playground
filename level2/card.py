@@ -182,14 +182,18 @@ def playGame():
         
 if __name__ == '__main__':
     # playGame()
-    try:
-        c1 = Card(12,"Hearts")
-        print(c1)
-    except Exception as err:
-        print(err)
-    b1 = BlackJackCard(12,"Clubs")
-    print(b1)
-    deck1 = Deck()
-    print(len(deck1))
-    deck1.nextCard()
-    print(len(deck1))
+    # try:
+    #     c1 = Card(12,"Hearts")
+    #     print(c1)
+    # except Exception as err:
+    #     print(err)
+    # b1 = BlackJackCard(12,"Clubs")
+    # print(b1)
+    # deck1 = Deck()
+    # print(len(deck1))
+    # deck1.nextCard()
+    # print(len(deck1))
+    c1 = BlackJackCard(12,"Hearts")
+    c2 = BlackJackCard(10,"Clubs")
+    d = c1.__add__(c2)
+    print(d)

@@ -42,6 +42,8 @@ def area(*args, mod="circle"):
 
 x = area(1)
 print("The circle area is %5.2f." %x)
+x = circleArea([2,])
+print(x)
 # mod is keyword argument only, if you don't provide the key, it will get into args array which is positional arguments.
 x = area(2, mod="square")
 print("The square area is %5.2f." %x)

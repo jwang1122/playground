@@ -44,7 +44,7 @@ def f1(x):
     # define all things need to do in a chain, if-else still in place of each function
     return isEven(x) >> sub4 >> add5 >> sub4 >> add5
 
-
-print("44:", f1(11))
+print("47:", f1(2.3+4j))
+print("44:", f1(11).value)
 print("45:", f1(12))
 print("46:", f1(4))
