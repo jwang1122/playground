@@ -3,7 +3,9 @@ def isEven(n):
 
 l = []
 for i in range(1,11):
-    if     
+    if isEven(i):
+        l.append(i)    
+print(l)
 
 l = [e for e in range(1,10) if e%2==0]
 print("10:",l)

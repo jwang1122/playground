@@ -8,8 +8,6 @@ def isPrime(x):
     else: # use for-else syntax
         return x>1
 
-print("I am running file: ",__name__)
-
 if __name__ == '__main__':
     for i in range(0, 5):
         print(i, "is prime?",isPrime(i))
