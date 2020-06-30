@@ -25,7 +25,7 @@ def create_table(conn, create_table_sql):
         print(e)
 
 def main():
-    database = r"C:\Users\wangqianjiang\Mirror\sqlite\db\pythonsqlite.db"
+    database = "pythonsqlite.db"
     
     sql_create_projects_table = """ CREATE TABLE IF NOT EXISTS projects (
                                         id integer PRIMARY KEY,
