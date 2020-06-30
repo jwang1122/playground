@@ -1,4 +1,7 @@
 import math
+import os
+
+print(os.sys.argv)
 
 def isPrime(n): 
     if n <= 1: 

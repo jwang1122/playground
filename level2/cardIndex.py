@@ -9,15 +9,11 @@ class Card(ABC):
         self.suit = suit
 
     def __repr__(self):
-        return " of ".join((self.face, self.suit))
+        return " of ".join((Deck.FACES[self.face], self.suit))
 
-     
     # @abstractmethod  
     def getValue(self):
-        switch = {"A":1,"J":11,"Q":12,"K":13}
-        if self.face.isdigit():
-            return int(self.face)
-        return switch.get(self.face)
+        return self.face + 1
 
     def __eq__(self, other):
         return self.getValue() == other.getValue()
@@ -33,10 +29,11 @@ class Card(ABC):
         
 class BlackJackCard(Card):
     def getValue(self):
-        switch = {"A":11,"J":10,"Q":10,"K":10}
-        if self.face.isdigit():
-            return int(self.face)
-        return switch.get(self.face)
+        if (self.face == 0):
+            return 11
+        elif (self.face > 8):
+            return 10
+        return self.face + 1
 
 
 class Deck:
@@ -49,7 +46,7 @@ class Deck:
     def __init__(self):
         # initialize data - stackOfCards - topCardIndex
         self.topCardIndex = 51
-        self.stackOfCards = [BlackJackCard(f, s) for s in Deck.SUITS for f in Deck.FACES]
+        self.stackOfCards = [BlackJackCard(f, s) for s in Deck.SUITS for f in range(len(Deck.FACES))]
 
     def __len__(self):
         return self.topCardIndex
@@ -97,7 +94,7 @@ class Player:
         a = 0
         hasA = False
         for c in self.hand:
-            if (c.face == "A"):
+            if (c.face == 0):
                 hasA = True
             a += c.getValue()
         if a > 21 and hasA:
@@ -185,11 +182,18 @@ def playGame():
         
 if __name__ == '__main__':
     # playGame()
-    deck1 = Deck()
-    print(len(deck1))
-    deck1.nextCard()
-    print(len(deck1))
-    c1 = BlackJackCard("J","Hearts")
-    c2 = BlackJackCard("A","Clubs")
+    # try:
+    #     c1 = Card(12,"Hearts")
+    #     print(c1)
+    # except Exception as err:
+    #     print(err)
+    # b1 = BlackJackCard(12,"Clubs")
+    # print(b1)
+    # deck1 = Deck()
+    # print(len(deck1))
+    # deck1.nextCard()
+    # print(len(deck1))
+    c1 = Card(12,"Hearts")
+    c2 = Card(10,"Clubs")
     d = c1.__add__(c2)
     print(d)
