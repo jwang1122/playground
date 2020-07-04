@@ -27,12 +27,10 @@ def is_prime(n):
 
 def prime(x):
     flag = True
-
     for i in range(2, (x//2+1)):
         if(x % i == 0):
             flag = False
             break
-
     return flag and x != 1
 
 @my_timer
@@ -40,8 +38,8 @@ def countPrime():
     count = 0
     for n in range(2,100000):
         # if(is_prime(n)):
-        # if(prime(n)):
-        if(isPrime(n)):
+        if(prime(n)):
+        # if(isPrime(n)):
             count += 1
     return count
 
@@ -74,4 +72,4 @@ def SieveOfEratosthenes(n):
     return c 
 
 print("Total count ", countPrime())
-print(f"Total count of Prime in 100000 is {SieveOfEratosthenes(100000)}")
+# print(f"Total count of Prime in 100000 is {SieveOfEratosthenes(100000)}")

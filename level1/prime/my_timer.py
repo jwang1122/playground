@@ -9,7 +9,7 @@ def my_timer(original):
         t1 = time.time()
         result = original(*args, **kwargs)
         t2 = time.time() - t1
-        print(f'11: {original.__name__} ran in {t2:.3f} seconds.')
+        print(f'12: {original.__name__} ran in {t2:.3f} seconds.')
         return result
     return wrapper
 
@@ -23,7 +23,7 @@ def anotherFunction(todo):
     time.sleep(3)
     print(f"24: anotherFunction()... run with arguments: ({todo})")
 
-if __name__ == '__main__':
-    display_info("John", 23)
+# if __name__ == '__main__':
+#     display_info("John", 23)
 
-    anotherFunction("Let's go shopping.")
+#     anotherFunction("Let's go shopping.")
