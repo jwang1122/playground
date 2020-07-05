@@ -1,5 +1,6 @@
 # AWS API Gateway
 
+## HTTP API
 [Web URL](https://us-east-2.console.aws.amazon.com/elasticbeanstalk/home?region=us-east-2#/environments)
 * Create Lambda
     - Lambda
@@ -11,4 +12,9 @@
     - Any: Get > Resource Path: <table> > Integration target: <Lambda function name>
     - Stage Name: $default > [Next] > [Create]
     - 
+
+## REST API
+* API Gateway
+    - Create API
+    - HTTP API > Build > Add Integration > Integration: Lambda > select lambda above
 

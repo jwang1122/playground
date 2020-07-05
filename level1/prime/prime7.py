@@ -50,8 +50,9 @@ def SieveOfEratosthenes(n):
     # initialize all entries it as true. A value  
     # in prime[i] will finally be false if i is 
     # Not a prime, else true. 
-    prime = [True for i in range(n+1)] 
-      
+    # prime = [True for i in range(n+1)] 
+    prime = [True] * (n+1)  
+
     p = 2
     while(p * p <= n): 
            
@@ -71,5 +72,5 @@ def SieveOfEratosthenes(n):
             c += 1
     return c 
 
-print("Total count ", countPrime())
-# print(f"Total count of Prime in 100000 is {SieveOfEratosthenes(100000)}")
+# print("Total count ", countPrime())
+print(f"Total count of Prime in 100000 is {SieveOfEratosthenes(100000)}")
