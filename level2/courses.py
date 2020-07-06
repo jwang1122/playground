@@ -98,11 +98,11 @@ if __name__ == "__main__":
     # l2 = getCourses(n, l1, s)
     # print("099:",l2)
 
-    # n = 3
-    # l1 = [[3, 1], [3, 2], [1, 0], [2, 0]]
-    # s = findNoEdge(n + 1, l1)
-    # l2 = getCourses(n, l1, s)
-    # print("105:",l2)
+    n = 3
+    l1 = [[3, 1], [3, 2], [1, 0], [2, 0]]
+    s = findNoEdge(n + 1, l1)
+    l2 = getCourses(n, l1, s)
+    print("105:",l2)
 
     # n = 3
     # l1 = [[1, 0], [2, 0],[3, 1], [3, 2]]
@@ -129,10 +129,10 @@ if __name__ == "__main__":
     # l2 = getCourses(n, l1, s)
     # print("124:",l2)
 
-    n = 5
-    l1 = [[5,2],[5,0],[4,0],[4,1],[2,3],[3,1]]
-    s = findNoEdge(n + 1, l1)
-    l2 = getCourses(n, l1, s)
-    print("136:",l2)
+    # n = 5
+    # l1 = [[5,2],[5,0],[4,0],[4,1],[2,3],[3,1]]
+    # s = findNoEdge(n + 1, l1)
+    # l2 = getCourses(n, l1, s)
+    # print("136:",l2)
     
     print("Done.")

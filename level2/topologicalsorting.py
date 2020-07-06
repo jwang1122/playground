@@ -65,10 +65,10 @@ print("64:",g.topologicalSort())
 
 g = Graph(4)
 g.addEdge(1, 3)
-g.addEdge(3, 1)
+g.addEdge(3, 1) # circle graph
 g.addEdge(2, 0)
 g.addEdge(1, 0)
-print("71:",g.topologicalSort())
+print("71: Circle Graph=>",g.topologicalSort())
 
 g = Graph(6)
 g.addEdge(5, 2)
@@ -77,8 +77,8 @@ g.addEdge(4, 0)
 g.addEdge(4, 1)
 g.addEdge(2, 3)
 g.addEdge(3, 1)
-g.addEdge(1, 5)
-print("81:",g.topologicalSort())
+g.addEdge(1, 5) # circle graph
+print("81: Circle Graph=>",g.topologicalSort())
 
 g = Graph(2)
 g.addEdge(1,0)

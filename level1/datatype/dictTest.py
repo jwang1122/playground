@@ -10,14 +10,17 @@ d = {"k1":"v1","k2":"v2"}
 print(d)
 print(d["k1"])
 
-# modify dictionary
+# modify dictionary => CRUD
 d["k3"] = "v3" # add new key-value pair
 print(d)
 print(d.get("k4","Not found")) # find unexisting key-value
-del d["k2"] # delete a key
-print(d)
 d["k1"] = "Hello" # modify a key
+print(d)
+del d["k2"] # delete a key
 print(d)
 
 d["weekday"] = d1 # dictionay in dictionary
+print(d)
+
+d.clear() # clear dictionary
 print(d)
