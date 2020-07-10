@@ -1,0 +1,20 @@
+@startuml 
+
+skinparam class {
+    BackgroundColor LightBlue
+    ArrowColor #FF00FF
+    BorderColor DarkBlue
+}
+
+Person "is" <|-- Student
+Person "is" <|-- Teacher
+Person "is" <|-- Employee
+Employee "has" *-- Manager
+Person : name:str
+Employee : employeeID:str
+Student : doHomework()
+Teacher : assignHomework()
+Teacher : employeeID:str
+Student : studentID:str
+
+@enduml

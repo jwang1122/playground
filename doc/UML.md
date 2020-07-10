@@ -1,11 +1,17 @@
-@startuml 
+# Plant UML
+* [VS Code UML](https://marketplace.visualstudio.com/items?itemName=jebbs.plantuml)
+* [Class Diagram Syntax](https://plantuml.com/class-diagram)
+* [Squence Diagram Syntax](https://plantuml.com/sequence-diagram)
 
-skinparam class {
-    BackgroundColor LightBlue
-    ArrowColor Red
-    BorderColor DarkBlue
-}
-title Black Jack Card Game
+* install extension
+    - VS Code Extension > PlantUML 2.13.12 > install
+    ```
+    brew cask install java
+    brew install graphviz
+    ```
+settings > [plantuml server](https://www.plantuml.com/plantuml)
+```plantuml
+@startuml
 class Card
 class BlackJackCard
 Card <|-- BlackJackCard
@@ -47,3 +53,4 @@ Game "1" -- "1" Dealer
 Game : play()
 
 @enduml
+```
