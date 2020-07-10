@@ -1,6 +1,7 @@
 # Plant UML
-[VS Code UML](https://marketplace.visualstudio.com/items?itemName=jebbs.plantuml)
-[Class Diagram Syntax](https://plantuml.com/class-diagram)
+* [VS Code UML](https://marketplace.visualstudio.com/items?itemName=jebbs.plantuml)
+* [Class Diagram Syntax](https://plantuml.com/class-diagram)
+* [Squence Diagram Syntax](https://plantuml.com/sequence-diagram)
 
 * install extension
     - VS Code Extension > PlantUML 2.13.12 > install
@@ -9,7 +10,7 @@
     brew install graphviz
     ```
 
-```plantumlcode
+```plantuml
 @startuml
 class Card
 class BlackJackCard

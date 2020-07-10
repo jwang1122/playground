@@ -1,0 +1,21 @@
+@startuml
+participant User
+
+User -> Game: Play
+activate Game
+
+Game -> Dealer: << Shuffle Card >>
+activate Dealer
+
+Dealer -> Player: Deal Card
+activate Player
+Player --> Dealer: hit=true
+Player -> Dealer: hit=false
+
+Dealer -> Game: Determine who win
+Game --> User: Play more?
+
+Game -> User: Game over
+deactivate Game
+
+@enduml
