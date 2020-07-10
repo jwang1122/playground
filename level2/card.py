@@ -116,6 +116,9 @@ class Player:
         answer = input("Do you want to hit? (y or n): ")
         return True if answer == 'y' else False
 
+    def showHand(self):
+        print(self.__repr__())
+
 class Dealer(Player):
     def __init__(self):
         self.deck = Deck()
@@ -135,6 +138,17 @@ class Dealer(Player):
             return True
         return False
     
+    def showHand(self):
+        print(self.name, end=': ')
+        print("[", end='')
+        count = 1
+        for c in self.hand:
+            if count != len(self.hand):
+                print(c, end=', ')
+            else:
+                print("Hiden]")
+            count += 1
+
 def playGame():
     dealer = Dealer()
     player = Player("John")
@@ -148,14 +162,14 @@ def playGame():
         player.addCardToHand(dealer.deal())
         dealer.addCardToHand(dealer.deal())
         print(player)
-        print(dealer)
+        dealer.showHand()
         hit = player.hit()
         while hit:
             player.addCardToHand(dealer.deal())
             if dealer.hit():
                 dealer.addCardToHand(dealer.deal())
             print(player)
-            print(dealer)
+            dealer.showHand()
             hit = player.hit()
         while dealer.hit():
             dealer.addCardToHand(dealer.deal())
@@ -191,5 +205,15 @@ if __name__ == '__main__':
     print(len(deck1))
     c1 = BlackJackCard("J","Hearts")
     c2 = BlackJackCard("A","Clubs")
-    d = c1.__add__(c2)
+    d = c1+c2
     print(d)
+    c1 = BlackJackCard("2","Hearts")
+    c2 = BlackJackCard("5","Clubs")
+    c3 = BlackJackCard("A","Diamonds")
+
+    dealer = Dealer()
+    dealer.addCardToHand(c1)
+    dealer.addCardToHand(c2)
+    dealer.addCardToHand(c3)
+    dealer.showHand()
+    

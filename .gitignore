@@ -1,5 +1,6 @@
 play/
 env/
+out/
 *.pyc
 .DS_Store
 __pycache__/
