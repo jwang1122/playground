@@ -1,4 +1,10 @@
 @startuml 
+
+skinparam class {
+    BackgroundColor LightBlue
+    ArrowColor Black
+    BorderColor DarkBlue
+}
 title Black Jack Card Game
 class Card
 class BlackJackCard
