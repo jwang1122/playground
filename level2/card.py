@@ -48,7 +48,7 @@ class Deck:
 
     def __init__(self):
         # initialize data - stackOfCards - topCardIndex
-        self.topCardIndex = 51
+        self.topCardIndex = 52
         self.stackOfCards = [BlackJackCard(f, s) for s in Deck.SUITS for f in Deck.FACES]
 
     def __len__(self):
@@ -59,7 +59,7 @@ class Deck:
 
     def shuffle(self):
         random.shuffle(self.stackOfCards)
-        self.topCardIndex = 51
+        self.topCardIndex = 52
 
     def getCard(self):
         return self.topCardIndex
