@@ -2,7 +2,7 @@
 
 skinparam class {
     BackgroundColor LightBlue
-    ArrowColor Black
+    ArrowColor Red
     BorderColor DarkBlue
 }
 title Black Jack Card Game
