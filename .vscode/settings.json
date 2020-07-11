@@ -1,10 +1,10 @@
 {
-    "python.pythonPath": "env/bin/python",
+    "python.pythonPath": "/Users/wangqianjiang/workspace/python/env/bin/python3",
     "python.formatting.provider": "yapf",
     "python.testing.unittestArgs": [
         "-v",
         "-s",
-        "./level2",
+        "./tests",
         "-p",
         "test_*.py"
     ],
