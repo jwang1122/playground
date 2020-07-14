@@ -100,8 +100,8 @@ class Player:
             if (c.face == "A"):
                 hasA = True
             a += c.getValue()
-        if a > 21 and hasA:
-            a -= 10
+            if(a>21 and hasA):
+                a -= 10
         return a
 
     def getHandSize(self):

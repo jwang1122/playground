@@ -5,10 +5,10 @@ skinparam class {
     ArrowColor Red
     BorderColor DarkBlue
 }
-title Black Jack Card Game
+title BlackJackCardGame
 class Card
 class BlackJackCard
-Card <|-- BlackJackCard
+Card <|-- "is" BlackJackCard
 
 Card : face:str
 Card : suit:str
@@ -18,10 +18,11 @@ Card : getValue():int
 
 BlackJackCard : getValue():int
 
-Deck "1" o-- "many" BlackJackCard
+Deck "1" o-- "1...many" BlackJackCard
 Deck : stackOfCards:list
 Deck : __init__()
 Deck : shuffle()
+Deck : nextCard()
 
 class Player
 class Dealer
