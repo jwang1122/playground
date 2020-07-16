@@ -102,6 +102,7 @@ class Player:
             a += c.getValue()
             if(a>21 and hasA):
                 a -= 10
+                hasA = False
         return a
 
     def getHandSize(self):
@@ -187,6 +188,8 @@ def playGame():
         elif playerTotal<dealerTotal:
             dealer.increaseWin()
             print("Dealer has bigger hand value!")
+        elif playerTotal == dealerTotal :
+            print("The player and dealer have same hand value.")
         else:
             player.increaseWin()
             print("Player has bigger hand value!")
@@ -198,22 +201,22 @@ def playGame():
             gameOver = True
         
 if __name__ == '__main__':
-    # playGame()
-    deck1 = Deck()
-    print(len(deck1))
-    deck1.nextCard()
-    print(len(deck1))
-    c1 = BlackJackCard("J","Hearts")
-    c2 = BlackJackCard("A","Clubs")
-    d = c1+c2
-    print(d)
-    c1 = BlackJackCard("2","Hearts")
-    c2 = BlackJackCard("5","Clubs")
-    c3 = BlackJackCard("A","Diamonds")
+    playGame()
+    # deck1 = Deck()
+    # print(len(deck1))
+    # deck1.nextCard()
+    # print(len(deck1))
+    # c1 = BlackJackCard("J","Hearts")
+    # c2 = BlackJackCard("A","Clubs")
+    # d = c1+c2
+    # print(d)
+    # c1 = BlackJackCard("2","Hearts")
+    # c2 = BlackJackCard("5","Clubs")
+    # c3 = BlackJackCard("A","Diamonds")
 
-    dealer = Dealer()
-    dealer.addCardToHand(c1)
-    dealer.addCardToHand(c2)
-    dealer.addCardToHand(c3)
-    dealer.showHand()
+    # dealer = Dealer()
+    # dealer.addCardToHand(c1)
+    # dealer.addCardToHand(c2)
+    # dealer.addCardToHand(c3)
+    # dealer.showHand()
     

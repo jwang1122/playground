@@ -35,18 +35,27 @@ Player : cleanHand()
 Player : getHandValue():int
 Player : hit():bool
 Player : showHand()
+Player : getHandSize()
 Player : name:str
 Player : hand:list
-Player : win:intß
+Player : win:int
 
 Dealer : hit():bool
 Dealer : shuffle()
 Dealer : deal():Card
 Dealer : showHand()
+Dealer : name:str
+Dealer : hand:list
+Dealer : win:int
+Dealer : deck:Deck
 
 Dealer "1" o-- "many" Deck
 
 Game "1" -- "1" Dealer
 Game : play()
+Game : dealCards()
+Game : check4Winer()
+Game : players:list
+Game : dealer:Dealer
 
 @enduml
