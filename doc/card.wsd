@@ -8,17 +8,18 @@ skinparam class {
 title BlackJackCardGame
 class Card
 class BlackJackCard
-Card <|-- "is" BlackJackCard
+Card "is" <|-- BlackJackCard
 
 Card : face:str
 Card : suit:str
+Card : blc:BlackJackCard
 Card : __init__()
 Card : __repr__()
 Card : getValue():int
 
 BlackJackCard : getValue():int
 
-Deck "1" o-- "1...many" BlackJackCard
+Deck "1" o-- "many" BlackJackCard
 Deck : stackOfCards:list
 Deck : __init__()
 Deck : shuffle()
