@@ -1,5 +1,9 @@
+"""
+Single Player vs Dealer Black Jack Card Game
+"""
 import random
 from abc import ABC, abstractmethod 
+from typing import List
 
 class Card(ABC):
     # constructor

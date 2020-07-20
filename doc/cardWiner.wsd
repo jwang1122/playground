@@ -1,0 +1,26 @@
+@startuml
+(*) --> "calculate hand values"
+
+if "player>21 and dealer<=21" then
+    --> "dealer win"
+
+else if "player<=21 and dealer>21"
+    --> "player win"
+    -->(*)
+
+else if "player>21 and dealer>21"
+    --> "both busted!"
+    -->(*)
+
+else if "player==dealer"
+    --> "no one win"
+    -->(*)
+
+else if "dealer>player"
+    --> "dealer win"
+    -->(*)
+    
+else 
+    --> "player win"
+endif
+@enduml

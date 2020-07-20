@@ -9,12 +9,16 @@ skinparam class {
 Person "is" <|-- Student
 Person "is" <|-- Teacher
 Person "is" <|-- Employee
-Employee "has" *-- Manager
-Person : name:str
-Employee : employeeID:str
+Employee "is" <|-- Manager
+Person : name:String
+Person : SSN:String
+Person : gender:Char
+Person : age:int
+Person : toString()
+Employee : employeeID:String
 Student : doHomework()
 Teacher : assignHomework()
-Teacher : employeeID:str
-Student : studentID:str
+Teacher : classes:ArrayList
+Student : studentID:String
 
 @enduml

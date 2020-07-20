@@ -10,6 +10,8 @@
     brew install graphviz
     ```
 settings > [plantuml server](https://www.plantuml.com/plantuml)
+
+## Class Diagram
 ```plantuml
 @startuml
 class Card
@@ -52,5 +54,31 @@ Dealer "1" o-- "many" Deck
 Game "1" -- "1" Dealer
 Game : play()
 
+@enduml
+```
+
+## Flowchart
+[Flowchart UML](https://plantuml.com/activity-diagram-legacy)
+```plantuml
+@startuml
+(*) --> "calculate hand values"
+
+if "player>21 and dealer<=21" then
+    --> "dealer win"
+else if "player<=21 and dealer>21"
+    --> "player win"
+    -->(*)
+else if "player>21 and dealer>21"
+    --> "both busted!"
+    -->(*)
+else if "player==dealer"
+    --> "no one win"
+    -->(*)
+else if "dealer>player"
+    --> "dealer win"
+    -->(*)
+else 
+    --> "player win"
+endif
 @enduml
 ```
