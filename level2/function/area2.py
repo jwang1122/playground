@@ -1,4 +1,5 @@
 from math import pi
+from level2.function.areaTable import areaTable
 """
 重要的 web service 理念：
 永远pass一个单一变量，返回一个单一变量。
@@ -29,13 +30,7 @@ def unsupportedArea(mod):
     return 0
 
 def area(*args, mod="circle"):
-    areaSwitcher = {
-        "circle":circleArea,
-        "square":squareArea,
-        "rectangle":rectangleArea,
-        "triangle":triangleArea
-    }
-    func = areaSwitcher.get(mod, unsupportedArea)
+    func = areaTable.get(mod, unsupportedArea)
     if func == unsupportedArea:
         return unsupportedArea(mod)
     return func(args)
