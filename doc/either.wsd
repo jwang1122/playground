@@ -1,0 +1,10 @@
+@startuml
+(*) --> "shopping"
+if "check list" 
+    --> "drive car"
+    -->(*)
+else
+    --> "Failure"
+if "check gas"
+    --> "drive to market"
+@enduml

@@ -27,5 +27,5 @@ print(x)
 
 persons = List("John", "Wei", "Jun")
 
-x = persons >> list1
-print(x)
+# x = persons >> list1
+# print(x)

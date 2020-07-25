@@ -12,7 +12,7 @@
 * Create sqlite3 connection (use file name without path)
 * Command line sqlite3 
 ```
-sqlite3 phtonsqlite.pd
+sqlite3 pytonsqlite.pd
 sqlite> .tables
 sqlite> .exit 
 sqlite> .quit

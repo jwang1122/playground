@@ -6,3 +6,4 @@ def test():
         x = list(zip(name, temperature))
 
         print(x)
+test()

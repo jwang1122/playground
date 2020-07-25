@@ -1,0 +1,13 @@
+@startuml
+
+interface RenewDriverLicense
+RenewDriverLicense : +renew()
+RenewDriverLicense <|.. Person
+Person : #name:String
+Person : -ssn:String
+Person : ~age:int
+Person : +driverLicense:String
+Person <|-- Employee
+Employee <|-- Manager
+
+@enduml
