@@ -9,5 +9,10 @@ Person : ~age:int
 Person : +driverLicense:String
 Person <|-- Employee
 Employee <|-- Manager
-
+Employee : +doTask()
+Manager : +assignTask()
+Person <|-- Student
+Person <|-- Teacher
+Student : +doHomework()
+Teacher : +assignHomework()
 @enduml
