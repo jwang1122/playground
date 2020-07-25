@@ -11,7 +11,7 @@ def push_five_strings(observer, scheduler):
 source = create(push_five_strings)
 
 source.subscribe(
-    on_next = lambda i: print("Received {0}".format(i)),
+    on_next = lambda i: print("Received: {0}".format(i)),
     on_error = lambda e: print("Error Occurred: {0}".format(e)),
     on_completed = lambda: print("Done!"),
 )
