@@ -1,4 +1,6 @@
 """
+Return boxed tuple message.
+
 isEven() function return either Right(success) or Lift(error)
 """
 from pymonad import *
@@ -18,3 +20,4 @@ print(isEven(7))
 print(isEven(3.2))
 print(isEven(3+2j))
 print(isEven(-2))
+print("Done.")

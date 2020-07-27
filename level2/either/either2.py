@@ -33,11 +33,11 @@ def sub4(x):
     return Left(reason)
 
 
-print("32:", isEven(3).bind(add5))
-print("33:", isEven(4).bind(add5))
-print("34:", isEven(5).bind(add5).bind(sub4).value)
-print("45:", isEven(4).bind(sub4).bind(add5).bind(sub4).value)
-print("36:", (isEven(10) >> sub4 >> add5).value)
+print("36:", isEven(3).bind(add5))
+print("37:", isEven(4).bind(add5))
+print("38:", isEven(5).bind(add5).bind(sub4).value)
+print("39:", isEven(4).bind(sub4).bind(add5).bind(sub4).value)
+print("40:", (isEven(10) >> sub4 >> add5).value)
 
 
 def f1(x):  
@@ -45,6 +45,6 @@ def f1(x):
     return isEven(x) >> sub4 >> add5 >> sub4 >> add5
 
 print("47:", f1(2.3+4j))
-print("44:", f1(11).value)
-print("45:", f1(12))
-print("46:", f1(4))
+print("48:", f1(11).value)
+print("49:", f1(12))
+print("50:", f1(4))

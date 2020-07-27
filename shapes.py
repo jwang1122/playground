@@ -5,7 +5,7 @@ def drawCircle(pen1, x, y, r):
     draw a circle with radius r and position (x, y)
 
     pen1: Turtle()
-    x: horisontal position on screen
+    x: horizontal position on screen
     y: vertical position on screen
     r: radius of the circle
     """

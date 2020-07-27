@@ -82,3 +82,25 @@ else
 endif
 @enduml
 ```
+
+```plantuml
+@startuml
+entity project{
+    * id:integer
+    * name:text
+    * begin_datet:text
+    * end_date:text
+}
+
+entity task{
+    * id:integer
+    * name:text
+    priority:integer
+    * project_id:integer <<FK>>
+    * begin_datet:text
+    * end_date:text
+}
+
+project ||..o{ task
+@enduml
+```
