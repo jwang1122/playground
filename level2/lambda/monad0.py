@@ -3,8 +3,7 @@ from pymonad import *
 def mdiv(a, b):
     if b == 0:
         return Nothing
-    else:
-        return (a / b)
+    return (a / b)
 
 @do(Maybe)
 def with_maybe(first_divisor):
