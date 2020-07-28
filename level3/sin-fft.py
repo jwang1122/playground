@@ -3,6 +3,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import scipy
 
+
 def fft_plot(audio, sampling_rate):
     n = len(audio)
     index = int(n // 2)
@@ -16,26 +17,22 @@ def fft_plot(audio, sampling_rate):
     plt.ylabel("Magnitude")
     return plt.show()
 
-x = np.arange(0, 1, 0.01)
-y = x**4 + 2
-x1 = np.arange(0, 100)
-z1 = 0.5/(math.e**(x1-51) + 1) - 0.5/(math.e**(x1-49) + 1)
-z2 = 0.5/(math.e**(x1-81) + 1) - 0.5/(math.e**(x1-85) + 1)
-l = z1 + y + z2
 
-fig=plt.figure()
-ax=fig.add_subplot(311)
-ax.plot(x, y)
-
-ax=fig.add_subplot(312)
-ax.plot(x, z1)
-
-ax=fig.add_subplot(313)
-ax.plot(x, l)
-
-plt.xlabel('Angle')
-plt.ylabel('delta + x^4')
-
+samples = 100.0
+a1 = 3
+f1 = 4
+a2 = 1
+f2 = 19
+x = np.arange(samples)
+y1 = a1*np.sin(2 * math.pi * f1 * (x / samples))
+y2 = a2*np.sin(2 * math.pi * f2 * (x / samples))
+plt.figure()
+# plt.stem(x,y1,'r',)
+plt.plot(x, y1, 'b',)
+plt.plot(x, y2, 'y')
+plt.plot(x, y1 + y2, 'r')
+plt.xlabel('TIme -->')
+plt.ylabel("Amplitude")
 plt.show()
 
-fft_plot(l, 100)
+fft_plot(y1 + y2, samples)
