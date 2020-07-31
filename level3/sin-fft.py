@@ -20,12 +20,12 @@ def fft_plot(audio, sampling_rate):
 
 samples = 100.0
 a1 = 3
-f1 = 4
+w1 = 4
 a2 = 1
-f2 = 19
-x = np.arange(samples)
-y1 = a1*np.sin(2 * math.pi * f1 * (x / samples))
-y2 = a2*np.sin(2 * math.pi * f2 * (x / samples))
+w2 = 19
+x = np.arange(samples+1)
+y1 = a1*np.sin(2 * math.pi * w1 * (x / samples))
+y2 = a2*np.sin(2 * math.pi * w2 * (x / samples))
 plt.figure()
 # plt.stem(x,y1,'r',)
 plt.plot(x, y1, 'b',)
