@@ -33,7 +33,7 @@ if __name__ == '__main__':
     # for i in range(25):
     #     walk = random_walk2(10)
     #     print(walk, "Distance from home =", abs(walk[0]) + abs(walk[1]))
-    number_of_walks = 10000
+    number_of_walks = 20000
     for walk_length in range(1, 31):
         no_transport = 0
         for i in range(number_of_walks):

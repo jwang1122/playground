@@ -19,7 +19,7 @@ def fft_plot(audio, sampling_rate):
 x = np.arange(0, 1, 0.01)
 y = x**4 + 2
 x1 = np.arange(0, 100)
-z1 = 0.5/(math.e**(x1-51) + 1) - 0.5/(math.e**(x1-49) + 1)
+z1 = 1/(math.e**(x1-55) + 1) - 1/(math.e**(x1-49) + 1)
 z2 = 0.5/(math.e**(x1-81) + 1) - 0.5/(math.e**(x1-85) + 1)
 l = z1 + y + z2
 
@@ -38,4 +38,4 @@ plt.ylabel('delta + x^4')
 
 plt.show()
 
-fft_plot(l, 100)
+#fft_plot(l, 100)

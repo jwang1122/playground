@@ -9,3 +9,7 @@
 * Monte Carlo Random Walk
     - monteCarlo.py > estimate pi
     - randomWalk.py > find law of behavior
+
+* Curve Fit
+[Curve Fit](https://docs.scipy.org/doc/scipy/reference/generated/scipy.optimize.curve_fit.html)
+

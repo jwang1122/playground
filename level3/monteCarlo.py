@@ -1,6 +1,6 @@
 import scipy
 
-N = 100000
+N = 10000
 x_array = scipy.random.rand(N)
 y_array = scipy.random.rand(N)
 # generate N pseudorandom independent x and y-values on interval [0,1)

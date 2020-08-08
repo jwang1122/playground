@@ -25,16 +25,20 @@ a1 = 3
 w1 = 4
 a2 = 1
 w2 = 19
+a3 = 6
+w3 = 30
 x = np.arange(samples)
 y1 = a1*np.sin(2 * math.pi * w1 * (x / samples))
 y2 = a2*np.sin(2 * math.pi * w2 * (x / samples))
+y3 = a3*np.sin(2 * math.pi * w3 * (x / samples))
 plt.figure()
 # plt.stem(x,y1,'r',)
 plt.plot(x, y1, 'b',)
 plt.plot(x, y2, 'g')
-plt.plot(x, y1 + y2, 'r')
+plt.plot(x, y3, 'r')
+plt.plot(x, y1 + y2 + y3, 'y')
 plt.xlabel('TIme -->')
 plt.ylabel("Amplitude")
 plt.show()
 
-fft_plot(y1 + y2, samples)
+fft_plot(y1 + y2 + y3, samples)

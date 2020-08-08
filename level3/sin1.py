@@ -5,7 +5,7 @@ import numpy as np
 import math
 import matplotlib.pyplot as plt
 
-x = np.arange(0, 6.3, 0.1)
+x = np.arange(0, 2*math.pi, 0.1)
 y = np.sin(x)
 plt.xlabel('Angle')
 plt.ylabel('Sin()')

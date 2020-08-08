@@ -8,8 +8,8 @@ w1 = 3
 y = sin(t)
 z = a*sin(w1*t)
 x = y + z
-l = a * cos(0.2*t)
-m = x + l
+l = cos(t)
+m = y + l
 
 fig=plt.figure()
 ax=fig.add_subplot(311)
@@ -19,7 +19,7 @@ plt.ylabel('Sin()')
 ax.plot(t, y)
 
 ax=fig.add_subplot(312)
-ax.plot(t,z)
+ax.plot(t,l)
 
 ax=fig.add_subplot(313)
 ax.plot(t,m)
